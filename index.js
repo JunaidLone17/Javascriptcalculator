@@ -14,9 +14,15 @@ const minusbtn = document.getElementById("minusbtn");
 const pbtn = document.getElementById("plusbtn");
 const equalbtn = document.getElementById("equalbtn");
 const textfield = document.getElementById("textfield");
+const resetbtn  = document.getElementById("resetbtn");
 console.log(textfield);
+resetbtn.addEventListener("click", function (event){
+    event.preventDefault();
+    textfield.setAttribute('value', '');
+});
 btn1.addEventListener("click", function (event) {
     event.preventDefault();
+    
     textfield.setAttribute('value', document.getElementById("textfield").value + "1")
     
 });
